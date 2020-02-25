@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+
+.button{
+background-color: #220B66;
+text-transform: uppercase;
+padding: 16px;
+color: white;
+text-decoration: none;
+font-family: sans-serif;
+border-radius: 20px;
+font-weight: bold;
+transition: background-color 500ms linear;
+}
+.button:hover{
+background-color: #4D2BE7;
+
+}
