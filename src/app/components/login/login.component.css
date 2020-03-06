@@ -1,15 +1,10 @@
-body {
-    background-color: lightseagreen;
-    margin: 0;
-    padding: 0;
-    background-size: cover;
-    font-family: sans-serif;
-    height: 100vh;
-  }
+
   .login{
     background-image: url("/assets/img/IDEA.jpg"); 
-background-size: cover;
+background-size: contain;
 border: 1px solid red;
+height: 100vh;
+
 
   }
   
