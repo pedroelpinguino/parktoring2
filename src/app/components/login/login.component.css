@@ -8,12 +8,14 @@
     top: 50%;
     left: 50%;
     position: absolute;
+
     transform: translate(-50%, -50%);
     box-sizing: border-box;
     padding: 0 30px;
   /** aqui pones el url**/
     background-size: contain ;/** contain : mantiene proporciones, y no se sale de contenedor
                           cover: cubre todo el espacio del container
+                        
     **/
     display: flex;
     flex-direction: column;
