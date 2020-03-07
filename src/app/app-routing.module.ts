@@ -1,26 +1,12 @@
-import {NgModule, Component } from '@angular/core'
+import {NgModule } from '@angular/core'
 import {Routes, RouterModule} from '@angular/router'
-import {HomeComponent} from "./components/home/home.component"
-import {LoginComponent} from "./components/login/login.component"
-import {MenuComponent} from "./components/menu/menu.component"
+
 
 const routes : Routes = [{
 
     path: "",
-    component: HomeComponent
+    loadChildren: () => import('./general/general.module').then( m => m.GeneralModule)
 },
-{ //objetos se abren con las llavesy despus del valor del objeto va una coma c:
-    path: "login",
-    component: LoginComponent
-
-},
-{
-path: "menu",
-component: MenuComponent
-
-}
-
-
 ];
 
 @NgModule({
