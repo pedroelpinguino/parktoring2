@@ -1,0 +1,28 @@
+<nav>
+    <div class="logo">
+        <img src="/assets/img/flor.svg" alt="">
+        <div class="logo__title">
+            <p>Parktoring</p>
+            <span>Parkingson Monitoring </span>
+        </div>
+    </div>
+
+    <div class="menu-icon" (click)="toggleMenu()" 
+        *ngIf="userIsLoged">
+       <p>Menu</p> 
+       <div class="menu" [ngClass]="{'isShowed': menuIsShowed}">
+           <ul>
+               <li>Pacientes</li>
+               <li>Configuracion</li>
+               <li>Acerca de</li>
+               <li>Cerrar sesión</li>
+           </ul>
+       </div>
+    </div>
+
+    <div *ngIf="!userIsLoged" class="user-not-loged">
+        <a>Iniciar sesión</a>
+        <a class="button"> Descarga la app.</a>
+    </div>
+
+</nav>
