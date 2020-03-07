@@ -1,0 +1,98 @@
+nav{
+position: fixed;
+top: 0;
+left: 0;
+width: 100vw;
+background-color: darkmagenta;
+height: 80px;
+padding: 0% 16px;
+box-sizing: border-box;
+
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.logo{
+width: 30%;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-family: sans-serif;
+}
+
+.logo img{
+height: 70%;
+
+margin-right: 16px;
+}
+
+.logo p{
+color: white;
+font-size: 20px;
+font-weight: bold;
+margin-bottom: 4px ;
+}
+
+.logo_title{
+height: 100%;
+display: flex ;
+flex-direction: column;
+
+}
+
+.logo_title span{
+color: whitesmoke;
+opacity: 0.5;
+
+}
+
+.menu-icon{
+width: 15%;
+font-weight: bold;
+text-transform: uppercase;
+color: white;
+cursor: pointer;
+position: relative;
+}
+
+.menu{
+position: absolute;
+display: none;
+top: 40px;
+width: 30vw;
+min-width: 300px;
+background-color: darkmagenta;
+
+}
+
+.menu.isShowed{
+display: block;
+
+}
+
+.menu ul{
+list-style: none;
+
+}
+
+.menu li{
+
+    margin: 8px 0;
+}
+
+.menu li:hover{
+opacity: 0.5;
+
+}
+
+.user-not-loged{
+padding: 0 1rem;
+color: white;
+}
+
+.user-not-loged .button{
+margin-left: 1rem; 
+
+}

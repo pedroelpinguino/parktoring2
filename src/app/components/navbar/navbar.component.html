@@ -1,0 +1,29 @@
+<nav>
+<div class= "logo">
+    <img src="/assets/img/flor.svg" alt="">
+    <div class="logo_title">
+    <p>Parktoring</p> 
+    <span>Parkinson Monitoring</span>
+</div>
+</div>
+<div class= "menu-icon" (click)="toggleMenu()" 
+*ngIf="userIsLoged">
+<p>Menu</p>
+<div class= "menu" [ngClass]="{'isShowed': menuisShowed}">
+<ul>
+<li>Paciente</li>
+<li>Configuracion</li>
+<li>Acerca de</li>
+<li>Cerrar sesion</li>
+
+
+</ul>
+
+</div>
+</div>
+
+<div *ngIf="!userIsLoged" class="user-not-loged">
+<a >Iniciar Sesión</a>
+<a class="button">¡Descagr la app!</a>
+</div>
+</nav>
