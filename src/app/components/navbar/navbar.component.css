@@ -96,3 +96,21 @@ color: white;
 margin-left: 1rem; 
 
 }
+
+@media screen and (max-width:600px) {
+    .logo {
+        width: 17%;
+        height: 67%;
+    }
+
+    .logo p, .logo span{
+        display: none;
+
+    }
+
+    .user-not-loged{
+        padding: 0;
+
+    }
+
+}
