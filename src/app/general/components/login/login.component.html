@@ -1,0 +1,30 @@
+
+<main class="login" >
+<div class="login-box">
+      <h1>Inicio de sesion</h1>
+        <!-- USERNAME INPUT -->
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <label for="email">Correo</label>
+          <input formControlName="email" id="email" type="email" placeholder="Ejemplo:JuanH@gmail.com">
+          <!-- PASSWORD INPUT -->
+          <label for="password">contraseña</label>
+          <input 
+          formControlName="password"
+            id="password" 
+            type="password" 
+            placeholder="Ejemplo: 123456">
+        
+           <button
+            class="button" id="ingresar" 
+            type="submit" name="button">ingresar</button>
+ </form>
+ <p *ngIf="hasError" class="text-error"> Contraseña/usuario incorrecto.</p>
+ <a href="">¿Perdio su contraseña?</a>
+ <a href="">¿No tiene una cuenta? </a>
+</div>      
+</main>
+
+
+
+
+

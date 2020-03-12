@@ -1,3 +1,8 @@
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
 nav {
     position: fixed; 
     /* pone un elemento flotando dentro del Documento HTML */

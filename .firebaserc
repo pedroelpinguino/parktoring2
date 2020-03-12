@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "testing-bddf0": {
+      "hosting": {
+        "parktoring": [
+          "testing-bddf0"
+        ]
+      }
+    }
+  }
+}
