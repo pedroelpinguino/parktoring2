@@ -1,5 +1,14 @@
+
 import {NgModule, Component } from '@angular/core'
-import {Routes, RouterModule} from '@angular/router'
+import {Routes, RouterModule, ExtraOptions, PreloadAllModules} from '@angular/router'
+
+const router: ExtraOptions = {
+    scrollPositionRestoration: 'enabled',
+    anchorScrolling: 'enabled',
+    useHash: true,
+    preloadingStrategy: PreloadAllModules
+  };
+
 
 const routes : Routes = [
     {
@@ -10,7 +19,7 @@ const routes : Routes = [
 ];
 
 @NgModule({
-imports: [RouterModule.forRoot(routes)],
+imports: [RouterModule.forRoot(routes, router)],
 exports: [RouterModule]
 
 

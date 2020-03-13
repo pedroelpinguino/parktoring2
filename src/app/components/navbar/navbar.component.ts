@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router'
 
 @Component({
   selector: 'app-navbar',
@@ -8,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
 menuisShowed:boolean;
 userIsLoged: boolean= false; 
-  constructor() { }
+
+  
+constructor(){}
+  
 
   ngOnInit(): void {
   }
@@ -24,5 +28,5 @@ this.menuisShowed=true;
   }
 }
 
-
 }
+

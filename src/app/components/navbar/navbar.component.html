@@ -1,10 +1,10 @@
 <nav>
-<a routerlink="/"class= "logo">
-    <img src="/assets/img/flor.svg" alt="">
+<a routerLink="/"class= "logo">
+    <img src="assets/img/flor.svg" alt="">
     <div class="logo_title">
-    <p>Parktoring</p> 
-    <span>Parkinson Monitoring</span>
-</div>
+        <p>Parktoring</p> 
+        <span>Parkinson Monitoring</span>
+    </div>
 </a>
 <div class= "menu-icon" (click)="toggleMenu()" 
 *ngIf="userIsLoged">
@@ -23,7 +23,7 @@
 </div>
 
 <div *ngIf="!userIsLoged" class="user-not-loged">
-<a >Iniciar Sesión</a>
+<a routerLink="/login" >Iniciar Sesión</a>
 <a class="button">Descagr la app</a>
 </div>
 </nav>

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "parktoring-989c1": {
+      "hosting": {
+        "parktoring": [
+          "parktoring-989c1"
+        ]
+      }
+    }
+  }
+}
