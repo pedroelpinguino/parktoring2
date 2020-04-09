@@ -7,13 +7,19 @@ import { Router } from "@angular/router";
 })
 export class NavbarComponent implements OnInit {
   menuIsShowed: boolean;
-  userIsLoged: boolean = true;
+  userIsLoged: boolean = false;
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    window.addEventListener("scroll", this.onScroll);
+  }
 
   toggleMenu() {
     this.menuIsShowed = !this.menuIsShowed;
+  }
+
+  private onScroll() {
+    console.log(window.scrollY);
   }
 }
