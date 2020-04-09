@@ -1,29 +1,53 @@
-<nav>
-<a routerLink="/"class= "logo">
-    <img src="assets/img/flor.svg" alt="">
-    <div class="logo_title">
-        <p>Parktoring</p>
-        <span>Parkinson Monitoring</span>
+<nav
+  class="fixed flex w-full py-2 px-4 bg-blue-200 top-0 shadow-md items-center justify-between"
+>
+  <a
+    routerLink="/"
+    class="flex items-center transition-colors duration-500 p-2 rounded-lg hover:bg-blue-100"
+  >
+    <img class="object-contain h-12 mr-4" src="assets/img/flor.svg" alt="" />
+    <div class="flex flex-col text-gray-700">
+      <p class="font-bold">Parktoring</p>
+      <span>Parkinson Monitoring</span>
     </div>
-</a>
-<div class= "menu-icon" (click)="toggleMenu()"
-*ngIf="userIsLoged">
-<p>Menu</p>
-<div class= "menu" [ngClass]="{'isShowed': menuIsShowed}">
-<ul>
-<li>Paciente</li>
-<li>Configuracion</li>
-<li>Acerca de</li>
-<li>Cerrar sesion</li>
+  </a>
+  <div (click)="toggleMenu()" *ngIf="userIsLoged">
+    <p
+      class="cursor-pointer font-bold rounded-lg p-4 transition-colors duration-500 hover:bg-gray-100"
+    >
+      Menu
+    </p>
+    <div
+      class="absolute bg-blue-100 w-1/2 h-1/2 px-8 py-2 right-0 shadow-md"
+      [ngClass]="{ hidden: !menuIsShowed }"
+    >
+      <ul class="flex flex-col">
+        <li
+          class="cursor-pointer p-2 rounded transition-colors duration-500 hover:bg-blue-200 hover:text-white"
+        >
+          Paciente
+        </li>
+        <li
+          class="cursor-pointer p-2 rounded transition-colors duration-500 hover:bg-blue-200 hover:text-white"
+        >
+          Configuracion
+        </li>
+        <li
+          class="cursor-pointer p-2 rounded transition-colors duration-500 hover:bg-blue-200 hover:text-white"
+        >
+          Acerca de
+        </li>
+        <li
+          class="cursor-pointer p-2 rounded transition-colors duration-500 hover:bg-blue-200 hover:text-white"
+        >
+          Cerrar sesión
+        </li>
+      </ul>
+    </div>
+  </div>
 
-
-</ul>
-
-</div>
-</div>
-
-<div *ngIf="!userIsLoged" class="user-not-loged">
-<a routerLink="/login" >Iniciar Sesión</a>
-<a class="button">Descagr la app</a>
-</div>
+  <div *ngIf="!userIsLoged" class="user-not-loged">
+    <a routerLink="/login">Iniciar Sesión</a>
+    <a class="button">Descagr la app</a>
+  </div>
 </nav>

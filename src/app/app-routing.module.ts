@@ -1,27 +1,33 @@
-
-import {NgModule, Component } from '@angular/core'
-import {Routes, RouterModule, ExtraOptions, PreloadAllModules} from '@angular/router'
+import { NgModule } from "@angular/core";
+import {
+  Routes,
+  RouterModule,
+  ExtraOptions,
+  PreloadAllModules,
+} from "@angular/router";
+import { LandingComponent } from "./components/landing/landing.component";
 
 const router: ExtraOptions = {
-    scrollPositionRestoration: 'enabled',
-    anchorScrolling: 'enabled',
-    useHash: true,
-    preloadingStrategy: PreloadAllModules
-  };
+  scrollPositionRestoration: "enabled",
+  anchorScrolling: "enabled",
+  useHash: true,
+  preloadingStrategy: PreloadAllModules,
+};
 
-
-const routes : Routes = [
-    {
-        path: "",
-        loadChildren: ()=> import("./general/general.module").then(m=>m.GeneralModule)
-    },
-
+const routes: Routes = [
+  {
+    path: "",
+    component: LandingComponent,
+  },
+  {
+    path: "auth",
+    loadChildren: () =>
+      import("./auth/auth-routing.module").then((m) => m.AuthRoutingModule),
+  },
 ];
 
 @NgModule({
-imports: [RouterModule.forRoot(routes, router)],
-exports: [RouterModule]
-
-
+  imports: [RouterModule.forRoot(routes, router)],
+  exports: [RouterModule],
 })
-export class AppRoutingModule{}
+export class AppRoutingModule {}

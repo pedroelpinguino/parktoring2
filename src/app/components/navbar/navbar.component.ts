@@ -1,24 +1,19 @@
-import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router'
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  selector: "app-navbar",
+  templateUrl: "./navbar.component.html",
 })
 export class NavbarComponent implements OnInit {
   menuIsShowed: boolean;
   userIsLoged: boolean = true;
 
+  constructor() {}
 
-  constructor() {
-  }
+  ngOnInit(): void {}
 
-
-  ngOnInit(): void {
-  }
-
-  toggleMenu(){
+  toggleMenu() {
     this.menuIsShowed = !this.menuIsShowed;
   }
 }
