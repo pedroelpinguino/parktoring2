@@ -7,26 +7,18 @@ import {Router} from '@angular/router'
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-menuisShowed:boolean;
-userIsLoged: boolean= false; 
+  menuIsShowed: boolean;
+  userIsLoged: boolean = true;
 
-  
-constructor(){}
-  
+
+  constructor() {
+  }
+
 
   ngOnInit(): void {
   }
-toggleMenu(){
-   console.log('Hiciste click en la barraa nav')
-  if(this.menuisShowed){
-this.menuisShowed=false;
 
-  }
-  else{
-this.menuisShowed=true;
-
+  toggleMenu(){
+    this.menuIsShowed = !this.menuIsShowed;
   }
 }
-
-}
-

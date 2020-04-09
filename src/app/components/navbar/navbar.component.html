@@ -2,14 +2,14 @@
 <a routerLink="/"class= "logo">
     <img src="assets/img/flor.svg" alt="">
     <div class="logo_title">
-        <p>Parktoring</p> 
+        <p>Parktoring</p>
         <span>Parkinson Monitoring</span>
     </div>
 </a>
-<div class= "menu-icon" (click)="toggleMenu()" 
+<div class= "menu-icon" (click)="toggleMenu()"
 *ngIf="userIsLoged">
 <p>Menu</p>
-<div class= "menu" [ngClass]="{'isShowed': menuisShowed}">
+<div class= "menu" [ngClass]="{'isShowed': menuIsShowed}">
 <ul>
 <li>Paciente</li>
 <li>Configuracion</li>
