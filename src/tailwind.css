@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .button{
-  @apply text-blue-500 p-2 mr-4 text-center rounded-lg transition-colors duration-300;
+  @apply cursor-pointer text-blue-500 p-2 mr-4 text-center rounded-lg transition-colors duration-300;
 }
 .button:hover, .button:focus, .button:active .button:focus-within{
  @apply bg-blue-100;
@@ -11,7 +11,7 @@
 
 .button.primary {
   transition-property: background-color, box-shadow ;
-  @apply cursor-pointer duration-200 ease-in bg-purple-500 w-full h-12 shadow-md text-white rounded-lg flex items-center justify-center;
+  @apply   ease-in bg-purple-500 w-full h-12 shadow-md text-white rounded-lg flex items-center justify-center;
 }
 .button.primary:hover{
   @apply bg-purple-600 shadow-xl;

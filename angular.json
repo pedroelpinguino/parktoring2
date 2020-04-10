@@ -17,7 +17,7 @@
               "path": "extra-webpack.config.js"
             },
             "outputPath": "dist/parktoring",
-            "baseHref": "/parktoring/",
+            "baseHref": "/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
