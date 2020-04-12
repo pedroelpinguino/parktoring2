@@ -6,6 +6,8 @@ import {
   PreloadAllModules,
 } from "@angular/router";
 import { LandingComponent } from "./components/landing/landing.component";
+import { LoginComponent } from "./components/login/login.component";
+import { SignupComponent } from "./components/signup/signup.component";
 
 const router: ExtraOptions = {
   scrollPositionRestoration: "enabled",
@@ -21,8 +23,16 @@ const routes: Routes = [
   },
   {
     path: "auth",
-    loadChildren: () =>
-      import("./auth/auth-routing.module").then((m) => m.AuthRoutingModule),
+    children: [
+      {
+        path: "login",
+        component: LoginComponent,
+      },
+      {
+        path: "sign",
+        component: SignupComponent,
+      },
+    ],
   },
 ];
 

@@ -7,13 +7,24 @@ import { AppRoutingModule } from "./app-routing.module";
 import { NavbarComponent } from "./components/navbar/navbar.component";
 import { environment } from "../environments/environment";
 import { AngularFireAuthModule } from "@angular/fire/auth";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { LoginComponent } from "./components/login/login.component";
+import { SignupComponent } from "./components/signup/signup.component";
 @NgModule({
-  declarations: [AppComponent, HomeComponent, NavbarComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    NavbarComponent,
+    LoginComponent,
+    SignupComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
