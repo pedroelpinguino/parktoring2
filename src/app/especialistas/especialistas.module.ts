@@ -5,7 +5,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { PacienteComponent } from "./components/paciente/paciente.component";
 import { MenuComponent } from "./components/menu/menu.component";
 import { PerfilComponent } from "./components/perfil/perfil.component";
-
+import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 @NgModule({
   declarations: [PerfilComponent, MenuComponent, PacienteComponent],
   imports: [
@@ -13,6 +13,7 @@ import { PerfilComponent } from "./components/perfil/perfil.component";
     EspecialistasRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    FontAwesomeModule,
   ],
 })
 export class EspecialistasModule {}
