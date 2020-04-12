@@ -7,7 +7,7 @@ import { Router } from "@angular/router";
 })
 export class NavbarComponent implements OnInit {
   menuIsShowed: boolean;
-  userIsLoged: boolean = false;
+  userIsLoged: boolean = true;
 
   constructor() {}
 

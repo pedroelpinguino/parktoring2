@@ -1,34 +1,26 @@
-import {NgModule, Component } from '@angular/core'
-import {Routes, RouterModule} from '@angular/router'
-import {MenuComponent} from './components/menu/menu.component'
-import {PacienteComponent} from './components/paciente/paciente.component'
-import {PerfilComponent} from './components/perfil/perfil.component'
+import { NgModule } from "@angular/core";
+import { Routes, RouterModule } from "@angular/router";
+import { MenuComponent } from "./components/menu/menu.component";
+import { PacienteComponent } from "./components/paciente/paciente.component";
+import { PerfilComponent } from "./components/perfil/perfil.component";
 
-
-
-const routes : Routes = [
-    {
-        path: "menu", 
-        component: MenuComponent,
-        
-    }, 
-    {
-        path: 'perfil',
-        component: PerfilComponent,
-
-    },
-    {
-        path: 'paciente',
-        component: PacienteComponent,
-
-    }
-]
-
+const routes: Routes = [
+  {
+    path: "",
+    component: MenuComponent,
+  },
+  {
+    path: "perfil",
+    component: PerfilComponent,
+  },
+  {
+    path: "paciente",
+    component: PacienteComponent,
+  },
+];
 
 @NgModule({
-imports: [RouterModule.forChild(routes)],
-exports: [RouterModule]
-
-
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule],
 })
-export class GeneralRoutingModule{}
+export class EspecialistasRoutingModule {}
