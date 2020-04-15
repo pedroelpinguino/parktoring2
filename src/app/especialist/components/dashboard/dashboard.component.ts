@@ -1,6 +1,5 @@
-import { Component, OnInit } from "@angular/core";
-import { faCalendarPlus, faSearch } from "@fortawesome/free-solid-svg-icons";
-
+import { Component, OnInit } from '@angular/core';
+import { faCalendarPlus, faSearch } from '@fortawesome/free-solid-svg-icons';
 type date = {
   id: number | string;
   pacient: string;
@@ -29,17 +28,17 @@ const DATES: Array<date> = [
     date: "11/08/2020",
   },
 ];
-
 @Component({
-  selector: "app-menu",
-  templateUrl: "./menu.component.html",
-  styleUrls: ["./menu.component.css"],
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.css']
 })
-export class MenuComponent implements OnInit {
+export class DashboardComponent implements OnInit {
   faCalendarPlus = faCalendarPlus;
   faSearch = faSearch;
   dates = DATES;
   constructor() {}
 
   ngOnInit(): void {}
+
 }

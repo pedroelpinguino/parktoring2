@@ -8,11 +8,10 @@ import {
 import { LandingComponent } from "./components/landing/landing.component";
 import { LoginComponent } from "./components/login/login.component";
 import { SignupComponent } from "./components/signup/signup.component";
-import { EspecialistasRoutingModule } from "./especialistas/especialistas.routing.module";
 const router: ExtraOptions = {
   scrollPositionRestoration: "enabled",
   anchorScrolling: "enabled",
-  useHash: true,
+  useHash: false,
   preloadingStrategy: PreloadAllModules,
 };
 
@@ -35,12 +34,12 @@ const routes: Routes = [
     ],
   },
   {
-    path: "especialistas",
+    path: "especialista",
     loadChildren: () =>
-      import("./especialistas/especialistas.module").then(
-        (m) => m.EspecialistasModule
+      import("./especialist/especialist.module").then(
+        (m) => m.EspecialistModule
       ),
-  },
+  }
 ];
 
 @NgModule({
