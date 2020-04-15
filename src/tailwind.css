@@ -51,3 +51,31 @@
   @apply text-sm text-gray-600 relative;
   bottom: -2px;
 }
+.profile-image {
+  @apply rounded-full h-12 w-12 bg-gray-500;
+}
+.float-button {
+  position: fixed;
+  bottom: 2rem;
+  right: 3rem;
+  @apply rounded-full shadow-xl float-button w-16 h-16 bg-transparent transition-opacity duration-300 rounded-full cursor-pointer fixed flex justify-center items-center text-xl text-white bg-blue-500;
+}
+
+.float-button:hover, .float-button:active, .float-button:focus {
+  @apply  opacity-50;
+}
+input, .input{
+  @apply p-2 border-2 border-gray-300 h-8 w-full rounded-lg transition transition-colors duration-200;
+}
+input:focus, input:active, .input:focus, .input:active, textarea:focus, textarea:active {
+    @apply border-blue-500;
+}
+.input-text{
+  @apply text-gray-600 mb-1;
+}
+.input-button{
+  @apply h-8 flex items-center justify-center;
+}
+textarea {
+  @apply overflow-hidden resize-none border-2 border-gray-300 rounded-lg transition transition-colors duration-200;
+}
