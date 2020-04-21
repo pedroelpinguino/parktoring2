@@ -7,10 +7,11 @@ import { RouterModule } from '@angular/router';
 import { PacientsComponent } from './components/pacients/pacients.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { PacientComponent } from './components/pacient/pacient.component';
+import { LayoutComponent } from './components/layout/layout.component';
 
 
 @NgModule({
-  declarations: [PacientsComponent, DashboardComponent, PacientComponent],
+  declarations: [PacientsComponent, DashboardComponent, PacientComponent, LayoutComponent],
   imports: [
     CommonModule, EspecialistRoutingModule, FontAwesomeModule, RouterModule
   ]

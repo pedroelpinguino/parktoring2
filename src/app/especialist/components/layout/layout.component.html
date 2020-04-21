@@ -1,0 +1,51 @@
+<nav
+  class="sticky z-50 flex w-full py-2 px-4 bg-blue-200 top-0 shadow-md items-center justify-between"
+>
+  <a
+    routerLink="/especialista/"
+    class="flex items-center transition-colors duration-500 p-2 rounded-lg hover:bg-blue-100"
+  >
+    <img class="object-contain h-12 mr-4" src="assets/img/flor.svg" alt="" />
+    <div class="flex flex-col text-gray-700">
+      <p class="font-bold">Parktoring</p>
+      <span>Parkinson Monitoring</span>
+    </div>
+  </a>
+  <div (click)="toggleMenu()">
+    <p
+      class="cursor-pointer font-bold text-gray-700 rounded-full w-12 h-12 flex items-center justify-center transition-colors duration-500 hover:bg-gray-100 hover:text-blue-500"
+    >
+      <fa-icon [icon]="faBars" class="text-2xl"></fa-icon>
+    </p>
+    <div
+      class="absolute rounded-lg bg-blue-100 w-1/2 h-1/2 px-8 py-4 right-0 shadow-md"
+      [ngClass]="{ hidden: !menuIsShowed }"
+    >
+      <ul class="flex flex-col">
+        <li
+          class="cursor-pointer p-2 rounded transition-colors duration-500 hover:bg-blue-200 hover:text-white"
+        >
+          <a routerLink="/especialista/pacientes/">
+            Pacientes
+          </a>
+        </li>
+        <li
+          class="cursor-pointer p-2 rounded transition-colors duration-500 hover:bg-blue-200 hover:text-white"
+        >
+          Configuracion
+        </li>
+        <li
+          class="cursor-pointer p-2 rounded transition-colors duration-500 hover:bg-blue-200 hover:text-white"
+        >
+          Acerca de
+        </li>
+        <li
+          class="cursor-pointer p-2 rounded transition-colors duration-500 hover:bg-blue-200 hover:text-white"
+        >
+          Cerrar sesión
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>

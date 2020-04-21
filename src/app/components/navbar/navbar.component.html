@@ -11,42 +11,8 @@
       <span>Parkinson Monitoring</span>
     </div>
   </a>
-  <div (click)="toggleMenu()" *ngIf="userIsLoged">
-    <p
-      class="cursor-pointer font-bold rounded-lg p-4 transition-colors duration-500 hover:bg-gray-100"
-    >
-      Menu
-    </p>
-    <div
-      class="absolute rounded-lg bg-blue-100 w-1/2 h-1/2 px-8 py-2 right-0 shadow-md"
-      [ngClass]="{ hidden: !menuIsShowed }"
-    >
-      <ul class="flex flex-col">
-        <li
-          class="cursor-pointer p-2 rounded transition-colors duration-500 hover:bg-blue-200 hover:text-white"
-        >
-          Paciente
-        </li>
-        <li
-          class="cursor-pointer p-2 rounded transition-colors duration-500 hover:bg-blue-200 hover:text-white"
-        >
-          Configuracion
-        </li>
-        <li
-          class="cursor-pointer p-2 rounded transition-colors duration-500 hover:bg-blue-200 hover:text-white"
-        >
-          Acerca de
-        </li>
-        <li
-          class="cursor-pointer p-2 rounded transition-colors duration-500 hover:bg-blue-200 hover:text-white"
-        >
-          Cerrar sesión
-        </li>
-      </ul>
-    </div>
-  </div>
 
-  <div *ngIf="!userIsLoged" class="flex items-center w-2/6">
+  <div class="flex items-center w-2/6">
     <a routerLink="/auth/login" class="button w-1/2">Iniciar Sesión</a>
     <a class="button primary w-1/2">Descaga la app</a>
   </div>

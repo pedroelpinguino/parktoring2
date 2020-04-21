@@ -8,6 +8,7 @@ import {
 import { LandingComponent } from "./components/landing/landing.component";
 import { LoginComponent } from "./components/login/login.component";
 import { SignupComponent } from "./components/signup/signup.component";
+import { LayoutComponent } from "./components/layout/layout.component";
 const router: ExtraOptions = {
   scrollPositionRestoration: "enabled",
   anchorScrolling: "enabled",
@@ -18,18 +19,24 @@ const router: ExtraOptions = {
 const routes: Routes = [
   {
     path: "",
-    component: LandingComponent,
-  },
-  {
-    path: "auth",
+    component: LayoutComponent,
     children: [
       {
-        path: "login",
-        component: LoginComponent,
+        path: "",
+        component: LandingComponent,
       },
       {
-        path: "sign",
-        component: SignupComponent,
+        path: "auth",
+        children: [
+          {
+            path: "login",
+            component: LoginComponent,
+          },
+          {
+            path: "sign",
+            component: SignupComponent,
+          },
+        ],
       },
     ],
   },
@@ -39,7 +46,7 @@ const routes: Routes = [
       import("./especialist/especialist.module").then(
         (m) => m.EspecialistModule
       ),
-  }
+  },
 ];
 
 @NgModule({
