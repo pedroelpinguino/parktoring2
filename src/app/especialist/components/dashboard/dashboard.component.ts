@@ -4,6 +4,7 @@ type date = {
   id: number | string;
   pacient: string;
   date: string;
+  pacientId: number;
 };
 
 const DATES: Array<date> = [
@@ -11,21 +12,25 @@ const DATES: Array<date> = [
     id: 1,
     pacient: "Alejandro Fernandez",
     date: "11/08/2020",
+    pacientId: 1
   },
   {
     id: 2,
     pacient: "Fernando Martinez",
     date: "11/08/2020",
+    pacientId: 2
   },
   {
     id: 3,
     pacient: "Marco Casas",
     date: "11/08/2020",
+    pacientId: 3
   },
   {
     id: 4,
     pacient: "Martin acosta",
     date: "11/08/2020",
+    pacientId: 4
   },
 ];
 @Component({

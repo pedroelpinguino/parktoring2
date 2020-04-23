@@ -31,11 +31,18 @@
     <p class="text-blue-600 font-bold">Citas próximas</p>
     <div class="mt-4">
       <div
-        class="w-full shadow-md bg-gray-300 my-2 rounded-md p-2 cursor-pointer hover:bg-gray-400 transition-colors duration-300"
+        class="w-full block shadow-md bg-gray-300 my-2 rounded-md p-2 cursor-pointer hover:bg-gray-400 transition-colors duration-300"
         *ngFor="let date of dates"
       >
-        <p><span class="text-blue-600">Fecha: </span>{{ date.date }}</p>
-        <p><span class="text-blue-600">Paciente: </span> {{ date.pacient }}</p>
+        <a
+          class="block"
+          routerLink="{{ '/especialista/pacientes/' + date.pacientId }}"
+        >
+          <p><span class="text-blue-600">Fecha: </span>{{ date.date }}</p>
+          <p>
+            <span class="text-blue-600">Paciente: </span> {{ date.pacient }}
+          </p>
+        </a>
       </div>
     </div>
   </div>
