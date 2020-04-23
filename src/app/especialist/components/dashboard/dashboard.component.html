@@ -1,3 +1,9 @@
+<app-add-date-modal
+  [isOpen]="isAddDateModalOpen"
+  [onClose]="closeOpenDateModal()"
+>
+</app-add-date-modal>
+
 <section
   class="mt-6 flex mb-2 w-3/3 items-center justify-around relative mx-auto"
 >
@@ -6,17 +12,12 @@
       Buscar paciente
     </p>
     <div class="flex items-center justify-between">
-      <input
-      />
+      <input />
       <button class="button input-button">
         <fa-icon [icon]="faSearch"></fa-icon>
       </button>
     </div>
   </div>
-  <img
-    class="bg-gray-400 rounded-full w-16 h-16 mr-8 object-cover object-center"
-    src="https://image.shutterstock.com/image-photo/portrait-smiling-red-haired-millennial-260nw-1194497251.jpg"
-  />
 </section>
 <section class="flex mt-4 hidden">
   <input type="date" />
@@ -41,8 +42,6 @@
 </section>
 
 <!-- float button -->
-<div
-  class="float-button"
->
+<div class="float-button" (click)="openAddDateModal()">
   <fa-icon [icon]="faCalendarPlus"></fa-icon>
 </div>

@@ -37,8 +37,15 @@ export class DashboardComponent implements OnInit {
   faCalendarPlus = faCalendarPlus;
   faSearch = faSearch;
   dates = DATES;
-  constructor() {}
+  isAddDateModalOpen = false;
+  constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
+  openAddDateModal() {
+    this.isAddDateModalOpen = true;
+  }
+  closeOpenDateModal() {
+    this.isAddDateModalOpen = false;
+  }
 
 }

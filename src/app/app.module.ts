@@ -10,8 +10,9 @@ import { AngularFireAuthModule } from "@angular/fire/auth";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { LoginComponent } from "./components/login/login.component";
 import { SignupComponent } from "./components/signup/signup.component";
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { LayoutComponent } from './components/layout/layout.component';
+import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
+import { LayoutComponent } from "./components/layout/layout.component";
+import { DateModalComponent } from "./components/date-modal/date-modal.component";
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +21,7 @@ import { LayoutComponent } from './components/layout/layout.component';
     LoginComponent,
     SignupComponent,
     LayoutComponent,
+    DateModalComponent,
   ],
   imports: [
     BrowserModule,
