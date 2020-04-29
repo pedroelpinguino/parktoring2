@@ -9,6 +9,7 @@ import { LandingComponent } from "./components/landing/landing.component";
 import { LoginComponent } from "./components/login/login.component";
 import { SignupComponent } from "./components/signup/signup.component";
 import { LayoutComponent } from "./components/layout/layout.component";
+import { AuthGuard } from './guards/auth.guard';
 const router: ExtraOptions = {
   scrollPositionRestoration: "enabled",
   anchorScrolling: "enabled",
@@ -42,6 +43,8 @@ const routes: Routes = [
   },
   {
     path: "especialista",
+    canActivate: [AuthGuard],
+
     loadChildren: () =>
       import("./especialist/especialist.module").then(
         (m) => m.EspecialistModule
@@ -53,4 +56,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes, router)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
